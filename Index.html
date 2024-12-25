@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+ <header>
+  <div class="container">
+    <h1>R Teddy Mulya</h1>
+    <div class="profile-photo-container">
+      <img src="profile.jpg" alt="Foto Profil Teddy" class="profile-photo" onclick="openProfileModal('profile.jpg')">
+    </div>
+    
+    <p>Halo, saya Teddy, atau lebih dikenal sebagai Kira. Saya adalah siswa kelas 11 dari SMK 17 Agustus 1945 Surabaya, jurusan Rekayasa Perangkat Lunak (RPL). Saya memiliki minat besar dalam dunia IT, terutama dalam pengembangan antarmuka pengguna (UI) untuk website.</p>
+  </div>
+</header>
+  
+  <nav>
+    <ul>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+  
+  <section id="about" class="container">
+    <h2>Tentang Saya</h2>
+    <p>Saya suka mendesain video menggunakan Alight Motion, CapCut, dan Kinemaster. Dalam pengeditan foto, saya lebih memilih Picsart dan Pixellab karena kemudahan penggunaannya. Saya juga suka menggambar fanart menggunakan IbisPaint X. Untuk pemrograman, bahasa yang paling saya sukai adalah Java, Python, HTML, dan CSS, yang sering saya gunakan untuk mengembangkan berbagai proyek kreatif.</p>
+  </section>
+  
+<section id="portfolio" class="container">
+  <h2>Proyek Saya</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Proyek 1</h3>
+      <div class="project-content">
+        <!-- Tempat untuk foto -->
+        <img src="proyek1.png" alt="Proyek 1" class="project-image" onclick="openModal('proyek1.png')">
+        <!-- Deskripsi proyek -->
+        <p>Gambar yang saya gambar menggunakan aplikasi IbisPaint X dan saya edit menggunakan Pixellab.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Proyek 2</h3>
+      <div class="project-gallery">
+        <div class="gallery-item">
+          <img src="hal1.jpg" alt="Foto 1" class="gallery-image" onclick="openModal('hal1.jpg')">
+        </div>
+        <div class="gallery-item">
+          <img src="hal2.jpg" alt="Foto 2" class="gallery-image" onclick="openModal('hal2.jpg')">
+        </div>
+        <div class="gallery-item">
+          <img src="hal3.jpg" alt="Foto 3" class="gallery-image" onclick="openModal('hal3.jpg')">
+        </div>
+      </div>
+      <p>UI prototype yang saya buat dengan tema web toko skincare</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for displaying profile photo -->
+<div id="profileModal" class="modal" onclick="closeProfileModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="profileModalImage">
+  <div id="caption"></div>
+</div>
+
+<!-- Modal for displaying full-size image -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="caption"></div>
+</div>
+
+<script>
+  // Function to open the profile modal and display the clicked profile image
+  function openProfileModal(imageSrc) {
+    var modal = document.getElementById("profileModal");
+    var modalImg = document.getElementById("profileModalImage");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+  }
+
+  // Function to close the profile modal
+  function closeProfileModal() {
+    var modal = document.getElementById("profileModal");
+    modal.style.display = "none";
+  }
+
+  // Function to open the general image modal
+  function openModal(imageSrc) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+  }
+
+  // Function to close the general image modal
+  function closeModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+  }
+</script>
+
+  <section id="contact" class="container">
+    <h2>Kontak</h2>
+    <p>
+      <a href="https://wa.me/6285231099989" target="_blank" class="whatsapp-link">
+        Hubungi Saya di WhatsApp
+      </a>
+    </p>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 sebelum masehi. R Teddy. Copyright ojok plagiat dadi wong!.</p>
+  </footer>
+</body>
+</html>
